@@ -3,13 +3,14 @@ package com.daimajia.slider.library;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Message;
-import android.support.v4.view.PagerAdapter;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Interpolator;
 import android.widget.RelativeLayout;
+
+import androidx.viewpager.widget.PagerAdapter;
 
 import com.daimajia.slider.library.Animations.BaseAnimationInterface;
 import com.daimajia.slider.library.Indicators.PagerIndicator;
@@ -41,8 +42,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * SliderLayout is compound layout. This is combined with {@link com.daimajia.slider.library.Indicators.PagerIndicator}
- * and {@link com.daimajia.slider.library.Tricks.ViewPagerEx} .
+ * SliderLayout is compound layout. This is combined with {@link PagerIndicator}
+ * and {@link ViewPagerEx} .
  *
  * There is some properties you can set in XML:
  *
@@ -98,37 +99,37 @@ public class SliderLayout extends RelativeLayout{
     private SliderAdapter mSliderAdapter;
 
     /**
-     * {@link com.daimajia.slider.library.Tricks.ViewPagerEx} indicator.
+     * {@link ViewPagerEx} indicator.
      */
     private PagerIndicator mIndicator;
 
 
     /**
-     * A timer and a TimerTask using to cycle the {@link com.daimajia.slider.library.Tricks.ViewPagerEx}.
+     * A timer and a TimerTask using to cycle the {@link ViewPagerEx}.
      */
     private Timer mCycleTimer;
     private TimerTask mCycleTask;
 
     /**
-     * For resuming the cycle, after user touch or click the {@link com.daimajia.slider.library.Tricks.ViewPagerEx}.
+     * For resuming the cycle, after user touch or click the {@link ViewPagerEx}.
      */
     private Timer mResumingTimer;
     private TimerTask mResumingTask;
 
     /**
-     * If {@link com.daimajia.slider.library.Tricks.ViewPagerEx} is Cycling
+     * If {@link ViewPagerEx} is Cycling
      */
     private boolean mCycling;
 
     /**
-     * Determine if auto recover after user touch the {@link com.daimajia.slider.library.Tricks.ViewPagerEx}
+     * Determine if auto recover after user touch the {@link ViewPagerEx}
      */
     private boolean mAutoRecover = true;
 
     private int mTransformerId;
 
     /**
-     * {@link com.daimajia.slider.library.Tricks.ViewPagerEx} transformer time span.
+     * {@link ViewPagerEx} transformer time span.
      */
     private int mTransformerSpan = 1100;
 
@@ -140,22 +141,22 @@ public class SliderLayout extends RelativeLayout{
     private long mSliderDuration = 4000;
 
     /**
-     * Visibility of {@link com.daimajia.slider.library.Indicators.PagerIndicator}
+     * Visibility of {@link PagerIndicator}
      */
     private PagerIndicator.IndicatorVisibility mIndicatorVisibility = PagerIndicator.IndicatorVisibility.Visible;
 
     /**
-     * {@link com.daimajia.slider.library.Tricks.ViewPagerEx} 's transformer
+     * {@link ViewPagerEx} 's transformer
      */
     private BaseTransformer mViewPagerTransformer;
 
     /**
-     * @see com.daimajia.slider.library.Animations.BaseAnimationInterface
+     * @see BaseAnimationInterface
      */
     private BaseAnimationInterface mCustomAnimation;
 
     /**
-     * {@link com.daimajia.slider.library.Indicators.PagerIndicator} shape, rect or oval.
+     * {@link PagerIndicator} shape, rect or oval.
      */
 
     public SliderLayout(Context context) {
@@ -451,7 +452,7 @@ public class SliderLayout extends RelativeLayout{
 
     /**
      * Inject your custom animation into PageTransformer, you can know more details in
-     * {@link com.daimajia.slider.library.Animations.BaseAnimationInterface},
+     * {@link BaseAnimationInterface},
      * and you can see a example in {@link com.daimajia.slider.library.Animations.DescriptionAnimation}
      * @param animation
      */
@@ -548,7 +549,7 @@ public class SliderLayout extends RelativeLayout{
     }
 
     /**
-     * get the {@link com.daimajia.slider.library.Indicators.PagerIndicator} instance.
+     * get the {@link PagerIndicator} instance.
      * You can manipulate the properties of the indicator.
      * @return
      */

@@ -1,12 +1,12 @@
 package com.daimajia.slider.library.Tricks;
 
 import android.content.Context;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 
+import androidx.viewpager.widget.PagerAdapter;
+
 /**
- * A {@link ViewPager} that allows pseudo-infinite paging with a wrap-around effect. Should be used with an {@link
+ * A {@link androidx.viewpager.widget.ViewPager} that allows pseudo-infinite paging with a wrap-around effect. Should be used with an {@link
  * InfinitePagerAdapter}.
  */
 public class InfiniteViewPager extends ViewPagerEx {

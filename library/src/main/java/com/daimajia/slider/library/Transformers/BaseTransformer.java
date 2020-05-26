@@ -12,13 +12,13 @@ import java.util.HashMap;
 /**
  * This is all transformers father.
  *
- * BaseTransformer implement {@link com.daimajia.slider.library.Tricks.ViewPagerEx.PageTransformer}
- * which is just same as {@link android.support.v4.view.ViewPager.PageTransformer}.
+ * BaseTransformer implement {@link ViewPagerEx.PageTransformer}
+ * which is just same as {@link androidx.viewpager.widget.ViewPager.PageTransformer}.
  *
- * After you call setPageTransformer(), transformPage() will be called by {@link com.daimajia.slider.library.Tricks.ViewPagerEx}
+ * After you call setPageTransformer(), transformPage() will be called by {@link ViewPagerEx}
  * when your slider are animating.
  *
- * In onPreTransform() function, that will make {@link com.daimajia.slider.library.Animations.BaseAnimationInterface}
+ * In onPreTransform() function, that will make {@link BaseAnimationInterface}
  * work.
  *
  * if you want to make an acceptable transformer, please do not forget to extend from this class.
