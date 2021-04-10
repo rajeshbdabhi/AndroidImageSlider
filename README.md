@@ -25,7 +25,7 @@ dependencies {
     	implementation 'com.daimajia.slider:library:1.1.6@aar'
 }
 ```
-
+implementation 'com.github.rajeshbdabhi:AndroidImageSlider:master-SNAPSHOT'
 
 #### Maven
 
